@@ -6,18 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commits Task</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <div class="row">
-            <div class="col-12 col-md-6 text-center">
-                <ul>
-                    <li v-for="event in commits">
-                        {{event.commit.message}} - {{event.commit.author.date}}
-                    </li>
-                </ul>
+            <div class="col-12 col-md-6 text-center commit-box flex">
+                <div>
+                    <h3>Commits History</h3>
+                    <ul class="timeline">
+                        <li v-for="event in commits">
+                            <h5 class="text-info">{{event.commit.message}}</h5>
+                            <p>{{formatDate(event.commit.author.date)}} </p>
+                        </li>
+                    </ul> 
+                </div>
             </div>
-            <div class="col-12 col-md-6 text-center">
+            <div class="col-12 col-md-6 text-center bg-primary text-white">
                 Details of app here
             </div>
         </div>
