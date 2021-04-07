@@ -8,7 +8,7 @@ var app = new Vue({
         formatDate(date){
             const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
             let toFormat = new Date(date)
-            return `${months[toFormat.getMonth()]} ${toFormat.getDate()} - ${toFormat.getUTCHours()}:${String(toFormat.getMinutes()+100).substring(0,2)}`
+            return `${months[toFormat.getMonth()]} ${toFormat.getDate()} - ${toFormat.getHours()}:${String(toFormat.getMinutes()+100).substring(1,3)}`
         }
     },
     async created(){
