@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Commits Task</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
-        <ul>
-            <li v-for="event in commits">
-                {{event.commit.message}}
-            </li>
-        </ul>
+        <div class="row">
+            <div class="col-12 col-md-6 text-center">
+                <ul>
+                    <li v-for="event in commits">
+                        {{event.commit.message}} - {{event.commit.author.date}}
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6 text-center">
+                Details of app here
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="./app.js"></script>
