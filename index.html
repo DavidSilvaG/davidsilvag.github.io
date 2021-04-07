@@ -13,7 +13,10 @@
         <div class="row home">
             <div class="col-12 col-md-6 text-center commit-box flex">
                 <div>
-                    <h3>Commits History</h3>
+                    <h3>Commits History</h3><button @click="getCommits()" class="btn btn-warning">Refresh</button>
+                    <div v-if="loading" class="spinner-border text-success" role="status">
+                        <span class="visually-hidden"></span>
+                    </div>
                     <ul class="timeline">
                         <li v-for="event in commits">
                             <a :href="'https://github.com/DavidSilvaG/davidsilvag.github.io/commit/'+event.sha" target="_blank" data-bs-toggle="tooltip" title="See changes on GitHub">
