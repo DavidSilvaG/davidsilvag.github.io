@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="row">
+        <div class="row home">
             <div class="col-12 col-md-6 text-center commit-box flex">
                 <div>
                     <h3>Commits History</h3>
@@ -22,8 +22,20 @@
                     </ul> 
                 </div>
             </div>
-            <div class="col-12 col-md-6 text-center bg-primary text-white">
-                Details of app here
+            <div class="col-12 col-md-6 text-center bg-primary text-white flex">
+                <div>
+                    <h4>Made with Vuejs, Boostrap and GithubApi</h4>
+                    <div class="mt-5">
+                        <h5>To see commits with GitHubApi make a GET request to:</h5>
+                        <h6>
+                            https://api.github.com/repos/{username}/{repoName}/commits/{sha}
+                        </h6>
+                        <small>*sha optional to see specific commit</small>
+                    </div>
+                    <div class="mt-5">
+                        To see code visit https://github.com/DavidSilvaG/davidsilvag.github.io.git
+                    </div>
+                </div>
             </div>
         </div>
     </div>
